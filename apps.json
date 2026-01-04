@@ -1,0 +1,13 @@
+
+{
+    "Flatpak": "flatpak",
+    "Snap": "snap",
+    "AppImage": "appimage",
+    "Git": "git",
+    "Curl": "curl",
+    "Firefox": "firefox",
+    "Cowsay": "cowsay",
+    "cmatrix": "cmatrix",
+    "VLC": "vlc",
+    "VSCode": ".deb Files/vscode.deb"
+}
