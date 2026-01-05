@@ -58,7 +58,6 @@ def install():
 # Interface
 root.title("TuxBuilder")
 root.geometry("400x300")
-root.iconbitmap("/resources/tuxbuildericon.ico")
 
 root.rowconfigure(0, weight=2)
 for i in range(1, 5):
