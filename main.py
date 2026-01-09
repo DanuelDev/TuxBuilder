@@ -4,6 +4,7 @@ import subprocess
 import json
 import os
 import sys
+import math
 
 root = tk.Tk()
 
@@ -55,15 +56,35 @@ def install():
     
     button['state'] = tk.NORMAL
 
+def calculate_columns(num_apps):
+    """
+    Calcula o número de colunas necessárias para exibir os checkbuttons
+    """
+    col_res = num_apps / 10
+    
+    return int(math.ceil(col_res))
+
+def calculate_root_width(num_apps):
+    """
+    Calcula a largura da janela principal com base no número de colunas
+    """
+    columns = calculate_columns(num_apps)
+    width = (columns * 150) + 50  # 150 pixels por coluna + margem
+    
+    return width
+
 # Interface
 root.title("TuxBuilder")
-root.geometry("400x300")
+root.geometry(f"{calculate_root_width(len(APPS))}x600")
 
+## Configuração do grid
+# configuração row
 root.rowconfigure(0, weight=2)
-for i in range(1, 5):
+for i in range(1, 10):
     root.rowconfigure(i, weight=2)
-root.columnconfigure(0, weight=2)
-root.columnconfigure(1, weight=2)
+# configuração col
+for i in range(calculate_columns(len(APPS))):
+    root.columnconfigure(i, weight=2)
 
 tk.Label(root, text="Selecione os aplicativos:", font=("Arial", 11, "bold")).grid(row=0, columnspan=2, pady=10)
 
@@ -73,7 +94,7 @@ vars_apps = {}
 index_col = 0
 index_row = 1
 for app in APPS:
-    if index_row > 5 and index_row < len(APPS):
+    if index_row > 10:
         index_col += 1
         index_row = 1
     var = tk.BooleanVar()
@@ -82,6 +103,7 @@ for app in APPS:
     chk.grid(row=index_row, column=index_col, sticky="w", padx=20)
     index_row += 1
 
+# Botão de instalação
 button = tk.Button(
     root,
     text="Instalar",
