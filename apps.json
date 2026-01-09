@@ -1,13 +1,25 @@
 
 {
-    "Flatpak": "flatpak",
-    "Snap": "snap",
     "AppImage": "appimage",
-    "Git": "git",
-    "Curl": "curl",
-    "Firefox": "firefox",
+    "Audacity": "audacity",
+    "CMatrix": "cmatrix",
     "Cowsay": "cowsay",
-    "cmatrix": "cmatrix",
+    "Curl": "curl",
+    "Discord": "discord",
+    "Fastfetch": "fastfetch",
+    "Firefox": "firefox",
+    "Flatpak": "flatpak",
+    "GIMP": "gimp",
+    "Git": "git",
+    "Google Chrome": "google-chrome-stable",
+    "Htop": "htop",
+    "LibreOffice": "libreoffice",
+    "MySQL": "mysql-server",
+    "Neofetch": "neofetch",
+    "OBS Studio": "obs-studio",
+    "Snap": "snap",
+    "Steam": "steam",
+    "Timeshift": "timeshift",
     "VLC": "vlc",
-    "VSCode": ".deb Files/vscode.deb"
+    "Visual Studio Code": "code"
 }
